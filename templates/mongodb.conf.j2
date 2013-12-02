@@ -1,0 +1,7 @@
+{% for k, v in mongodb.config.iteritems() %}
+{{ k }}={{ v }}
+{% endfor %}
+
+{% if mongodb.keyFile %}
+keyFile=/etc/mongodb.keyfile
+{% endif %}

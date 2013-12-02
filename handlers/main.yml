@@ -1,0 +1,7 @@
+- name: restart mongodb
+  sudo: true
+  action: service name=mongodb state=restarted
+  notify: wait for mongodb
+
+- name: wait for mongodb
+  wait_for: port={{ mongodb.config.port | default(27017) }} delay=1

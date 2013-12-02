@@ -1,0 +1,14 @@
+mongodb:
+  username: null
+  password: null
+  database: null
+
+  # local path to a keyfile that will be copied over to the server
+  # and added to mongodb.conf
+  keyFile: null
+
+  initiate_replica_set: false
+  config:
+    dbpath: /var/lib/mongodb
+    logpath: /var/log/mongodb/mongodb.log
+    logappend: 'true'

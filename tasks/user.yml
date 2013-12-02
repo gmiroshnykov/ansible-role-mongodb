@@ -1,0 +1,6 @@
+- name: mongodb - create user
+  mongodb_user:
+    user={{ mongodb.username }}
+    password={{ mongodb.password }}
+    database={{ mongodb.database }}
+  changed_when: false
